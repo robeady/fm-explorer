@@ -4,6 +4,8 @@ This repo contains:
 - an experimental script that can export data to CSV
 - an experimental player editor
 
+![fmedit window](./fmedit.png)
+
 ## Dependencies
 
 These tools rely on FMScoutFramework.dll which can be found in releases of [FMSE](https://www.fmscout.com/a-fm-scout-editor-2019.html) or newer versions.
@@ -17,7 +19,11 @@ We depend on .NET framework 4.6.1 and support x64 only, because so does FMSE. We
 
 ## Run
 
-Copy FMScoutFramework.dll to the build output directory (e.g. bin/debug) then run the executable.
+First copy FMScoutFramework.dll to the relevant build output directory (e.g. bin/debug)
+
+fmdump: just run the executable and it will produce some CSV files in the current directory.
+
+fmedit: the editor will load the game state on startup. Enter the UID of a player into the field at the top, and a bunch of properties will be shown. You can edit player attributes and positions under the Attributes property and then press Save Attributes to save your changes. Changes to other fields cannot be saved right now.
 
 Logs from the fm scout library go to log.txt in the working directory, logs from my script go to stdout.
 
